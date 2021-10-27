@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+    <div class="input-group mb-3 Top">
+        <input type="text" [(ngModel)]="searchModelItem.searchString" class="form-control" placeholder="Search"
+            id="search" mdbInput autocomplete="off" />
+        <button nbButton status="info" ghost size="medium" type="search">
+            <nb-icon icon="search-outline"></nb-icon>
+        </button>
+        
+        <div class="col col-md-1">
+
+        </div>
+
+        
+        <button class="btn btn-primary" routerLink="/addProduct">Create Product</button>
+    </div>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Producer </th>
+                
+
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList; index as i">
+                <td>{{product.productName}}</td>
+                <td>{{product.productPrice}}</td>
+                <td>{{product.producerName}}</td>
+                
+                
+
+                <td>
+                    <button nbButton status="success" type="button" size="tiny" style="margin: 2px;"
+                        (click)="navigateEdit(product)">
+                        <nb-icon icon="edit-2-outline" class="Edit"></nb-icon>
+                    </button>
+                    <button nbButton status="danger" size="tiny" style="margin: 2px;" (click)="delete(product.productId,i)">
+                        <nb-icon icon="trash-2-outline" class="Delete"></nb-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [pageSize]="searchModelItem.PageSize"
+        [collectionSize]="collectionSize" (pageChange)="pageChanged()">
+    </ngb-pagination> -->
+</div>

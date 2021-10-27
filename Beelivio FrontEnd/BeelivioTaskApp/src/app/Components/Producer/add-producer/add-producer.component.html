@@ -1,0 +1,30 @@
+<div class="container-fluid .col-12 .col-sm-6 .col-md-8">
+    <div class="input-group mb-3">
+        <form role="form" class="col-md-12" #MySelectForm="ngForm" (submit)="onFormSubmit()">
+
+            <div class="row" >
+                <div class="col-md-11">
+                    
+                </div>
+                <div class="col-md-1">
+                    <button nbButton status="primary" type="button" outline="true" size="small" routerLink="/listProducer" > Exit </button>
+                </div>
+            </div>
+        
+        
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Producer Name</label>
+                    <input  type="text" nbInput class="form-control" [(ngModel)]="producerModel.name" name="firstName"
+                        autocomplete="off" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <fieldset class="form-group">
+                    <button nbButton status="success"  type="submit" class="S">Submit</button>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+    <div class="input-group mb-3 Top">
+        <input type="text" [(ngModel)]="searchModelItem.searchString" class="form-control" placeholder="Search"
+            id="search" mdbInput autocomplete="off" />
+        <button nbButton status="info" ghost size="medium" type="search">
+            <nb-icon icon="search-outline"></nb-icon>
+        </button>
+        
+        <div class="col col-md-1">
+
+        </div>
+
+        
+        <button class="btn btn-primary" routerLink="/addProducer">Create Producer</button>
+    </div>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producer of producerList; index as i">
+                <td>{{producer.name}}</td>
+                <td>
+                    <button nbButton status="success" type="button" size="tiny" style="margin: 2px;"
+                        (click)="navigateEdit(producer)">
+                        <nb-icon icon="edit-2-outline" class="Edit"></nb-icon>
+                    </button>
+                    <button nbButton status="danger" size="tiny" style="margin: 2px;" (click)="delete(producer.id,i)">
+                        <nb-icon icon="trash-2-outline" class="Delete"></nb-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [pageSize]="searchModelItem.PageSize"
+        [collectionSize]="collectionSize" (pageChange)="pageChanged()">
+    </ngb-pagination> -->
+</div>

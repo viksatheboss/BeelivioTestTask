@@ -1,0 +1,12 @@
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\bin\Debug\net5.0\BeelivioDomain.deps.json
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\bin\Debug\net5.0\BeelivioDomain.dll
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\bin\Debug\net5.0\ref\BeelivioDomain.dll
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\bin\Debug\net5.0\BeelivioDomain.pdb
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.csproj.AssemblyReference.cache
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.AssemblyInfoInputs.cache
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.AssemblyInfo.cs
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.csproj.CoreCompileInputs.cache
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.dll
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\ref\BeelivioDomain.dll
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioDomain\obj\Debug\net5.0\BeelivioDomain.pdb
