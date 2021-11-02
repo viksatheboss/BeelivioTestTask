@@ -62,5 +62,5 @@ C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\bin\Debug\net5.0\Hum
 C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\obj\Debug\net5.0\BeelivioTaskApp.csproj.CopyComplete
 C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\viksa\source\repos\BeelivioTaskApp\BeelivioTaskApp\obj\Debug\net5.0\BeelivioTaskApp.csproj.CopyComplete

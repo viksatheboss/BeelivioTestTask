@@ -20,21 +20,27 @@
                         <div class="form-group form-row">
                             <label for="username" class="col-md-4 col-form-label">Username</label>
                             <div class="col-md-8">
-                                <input type="text" [(ngModel)]="registerModel.userName"  class="form-control" name="1" autofocus>
+                                <input type="text" [(ngModel)]="registerModel.userName" required class="form-control" name="1" autofocus>
                             </div>
             
                         </div>
                         <div class="form-group form-row">
                             <label for="password"  class="col-md-4 col-form-label">Password</label>
                             <div class="col-md-8">
-                                <input type="password" [(ngModel)]="registerModel.password" class="form-control" name="2" />
+                                <input type="password" [(ngModel)]="registerModel.password" required class="form-control" name="2" />
                             </div>
                             
             
                         </div>
+                        <div class="form-group form-row">
+                            <label for="email" class="col-md-4 col-form-label">Email</label>
+                            <div class="col-md-8">
+                                <input type="email" [(ngModel)]="registerModel.email" required class="form-control" name="email"/>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <button class="btn btn-primary">
-                                Login
+                                Register
                             </button>
             
                         </div>

@@ -41,17 +41,19 @@ namespace BeelivioTaskApp.Controllers
         [HttpPost("registerUser")]
         public async Task<ActionResult<UserDto>> RegisterUser(RegisterDto register)
         {
-            if (await UserExist(register.UserName)) return BadRequest("Already have user with same name");
+            if (await UserExist(register.UserName)) return new UserDto { ResponseCode=409};
             using var hmac = new HMACSHA512();
             var user = new UserModel
             {
                 Name = register.UserName,
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(register.Password)),
-                PasswordSalt = hmac.Key
+                PasswordSalt = hmac.Key,
+                Email = register.Email
             };
             _context.User.Add(user);
             await _context.SaveChangesAsync();
             return new UserDto { 
+            ResponseCode=200,
             UserName = user.Name,
             Token = _tokenService.CreateToken(user)};
         }
@@ -64,14 +66,15 @@ namespace BeelivioTaskApp.Controllers
         public async Task<ActionResult<UserDto>> Login (LoginDto login)
         {
             var user = await _context.User.SingleOrDefaultAsync(x => x.Name == login.UserName);
-            if (user == null) return Unauthorized("Invalid UserName");
+            if (user == null) return new UserDto { ResponseCode = 400 };
             using var hmac = new HMACSHA512(user.PasswordSalt);
             var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(login.Password));
              for(var i=0; i<computedHash.Length; i++)
             {
-                if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid password");
+                if (computedHash[i] != user.PasswordHash[i]) return new UserDto { ResponseCode = 400 };
             }
             return new UserDto { 
+            ResponseCode= 200,
             UserName = user.Name,
             Token = _tokenService.CreateToken(user)};
         }

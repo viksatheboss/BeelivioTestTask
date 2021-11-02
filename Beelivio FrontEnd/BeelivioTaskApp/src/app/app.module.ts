@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
 import { MainMenuComponent } from './Components/main-menu/main-menu.component';
-import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule, NbToastrModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbDialogModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule, NbToastrModule } from '@nebular/theme';
 import { HeaderComponent } from './Components/header/header.component';
 import { AuthLayoutComponent } from './Components/auth-layout/auth-layout.component';
 import { httpInterceptorProviders } from './Interceptors/allInterceptors';
@@ -21,6 +21,8 @@ import { AddProducerComponent } from './Components/Producer/add-producer/add-pro
 import { RegisterComponent } from './Components/register/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 
 
@@ -37,6 +39,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListProducerComponent,
     AddProducerComponent,
     RegisterComponent,
+    ConfirmDialogComponent,
+    PageNotFoundComponent,
     
   ],
   imports: [
@@ -56,7 +60,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NbIconModule,
     NbEvaIconsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NbDialogModule.forRoot(),
   ],
   providers: [
     httpInterceptorProviders

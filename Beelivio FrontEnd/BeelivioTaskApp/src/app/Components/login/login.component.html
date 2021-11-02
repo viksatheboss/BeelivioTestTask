@@ -14,18 +14,18 @@
                 </div>
                 
                 <div class="card-body">
-                    <form role="form" #MySelectForm="ngForm" (submit)="onFormSubmit()">
+                    <form role="form" #LoginForm="ngForm" (submit)="onFormSubmit()">
                         <div class="form-group form-row">
                             <label for="username" class="col-md-4 col-form-label">Username</label>
                             <div class="col-md-8">
-                                <input type="text" [(ngModel)]="loginRequest.userName"  class="form-control" name="1" autofocus>
+                                <input type="text" [(ngModel)]="loginRequest.userName" required class="form-control" name="1" autofocus>
                             </div>
             
                         </div>
                         <div class="form-group form-row">
                             <label for="password"  class="col-md-4 col-form-label">Password</label>
                             <div class="col-md-8">
-                                <input type="password" [(ngModel)]="loginRequest.password" class="form-control" name="2" />
+                                <input type="password" [(ngModel)]="loginRequest.password" required class="form-control" name="2" />
                             </div>
                             
             
